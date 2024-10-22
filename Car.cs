@@ -22,9 +22,9 @@ class Car
     {
         return _value;
     }
-    public string GetGBValue()
+    public string GetValue(string Locale)
     {
-        return _value.ToString("C", CultureInfo.CreateSpecificCulture("en-gb"));
+        return _value.ToString("C", CultureInfo.CreateSpecificCulture(Locale));
     }
 
     public int GetYear()
@@ -38,6 +38,6 @@ class Car
                 "Model: " + _model + Environment.NewLine +
                 "Year: " + GetYear() + Environment.NewLine +
                 "Registration: " + _registration + Environment.NewLine +
-                "Value: " + GetGBValue();
+                "Value: " + GetValue("en-gb");
     }
 }
